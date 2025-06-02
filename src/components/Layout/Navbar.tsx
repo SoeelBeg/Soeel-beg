@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Moon, Sun } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
-import logo from '../../images/logos/Logo.png';
+import logo from '../../images/logo.png';
 
 
 const Navbar: React.FC = () => {
