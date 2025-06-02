@@ -51,7 +51,7 @@ const Navbar: React.FC = () => {
           }}
         >
           <img
-            src="/logo.png"
+            src="/logo.PNG"
             alt="Logo"
             className="h-10 w-auto object-contain"
           />

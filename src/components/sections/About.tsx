@@ -1,6 +1,6 @@
 import React from 'react';
 import { Code, Globe, Book, Coffee } from 'lucide-react';
-import resume from '../../images/resume.pdf';
+// import resume from '../../images/resume.pdf';
 
 const About: React.FC = () => {
   return (
@@ -27,7 +27,7 @@ const About: React.FC = () => {
             
             <div className="pt-4">
               <a 
-                href={resume} 
+                href='/resume.pdf'
                 target="_blank" 
                 className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-medium rounded-lg hover:opacity-90 transition-opacity"
               >

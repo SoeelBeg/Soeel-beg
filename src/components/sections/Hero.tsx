@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowDown, ArrowRight } from 'lucide-react';
-import profile from '../../images/1.png';
+// import profile from '../../images/1.png';
 
 const Hero: React.FC = () => {
   const scrollToContact = () => {
@@ -60,7 +60,7 @@ const Hero: React.FC = () => {
           <div className="order-1 md:order-2 flex justify-center">
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full overflow-hidden border-4 border-blue-500/20 dark:border-blue-500/10">
               <img 
-                src={profile} 
+                src='/1.PNG'
                 alt="Soeel Beg" 
                 className="w-full h-full object-cover"
               />
