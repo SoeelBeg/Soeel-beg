@@ -7,29 +7,29 @@ import Skills from './components/sections/Skills';
 import Projects from './components/sections/Projects';
 import Contact from './components/sections/Contact';
 import Footer from './components/Layout/Footer';
-import {Helmet} from 'react-helmet';
+import { Helmet } from 'react-helmet';
 
 function App() {
   // Update title
   useEffect(() => {
-    document.title = "SoeelBeg.dev";
+    document.title = "SoeelBeg.dev | React Developer | Responsive Web Apps |WordPress";
   }, []);
 
   return (
     <ThemeProvider>
-       <Helmet>
+      <Helmet>
         <title>Soeel Beg | Frontend React Developer</title>
         <meta
           name="description"
-          content="I'm Soeel Beg, a ReactJS developer who builds beautiful, responsive, and user-friendly websites and applications."
+          content="I'm Soeel Beg, a ReactJS developer specializing in building responsive, clean, and user-friendly web applications using modern tools like React, JavaScript, and APIs."
         />
         <meta
           name="keywords"
-          content="React Developer, Frontend Developer,WordPress Developer,  Soeel Beg, JavaScript, Web Developer, Portfolio"
+          content="React Developer, Frontend Developer, WordPress Developer, Soeel Beg, JavaScript, Web Developer, Portfolio"
         />
         <meta name="author" content="Soeel Beg" />
 
-        {/* Open Graph Meta Tags (for LinkedIn, Facebook) */}
+        {/* Open Graph Meta Tags */}
         <meta property="og:title" content="Soeel Beg | React Developer" />
         <meta
           property="og:description"
@@ -47,7 +47,28 @@ function App() {
           content="React Developer Portfolio of Soeel Beg. Showcasing skills, projects and contact details."
         />
         <meta name="twitter:image" content="https://soeel-beg.vercel.app/preview.png" />
+
+        {/* JSON-LD Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: `
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Soeel Beg",
+          "jobTitle": "Frontend Developer",
+          "url": "https://soeel-beg.vercel.app",
+          "sameAs": [
+            "https://github.com/soeel-beg",
+            "https://linkedin.com/in/soeel-beg"
+          ]
+        }
+      `
+          }}
+        />
       </Helmet>
+
 
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
         <Navbar />
