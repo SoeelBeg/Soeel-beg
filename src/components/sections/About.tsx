@@ -12,7 +12,7 @@ const About: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
+          <div className="space-y-6 text-justify">
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               Hi there! I'm <span className="font-semibold">Soeel Beg</span>, a passionate ReactJS developer with a strong focus on creating clean, responsive, and user-friendly web applications.
             </p>
