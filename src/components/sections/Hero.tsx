@@ -37,7 +37,7 @@ const Hero: React.FC = () => {
             </h1>
             
             <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-8 max-w-lg">
-              A passionate React developer focused on creating beautiful and functional web experiences. I build responsive, user-friendly applications with modern tools and technologies.
+              I help individuals and businesses build fast, modern, and responsive web applications using React and other cutting-edge tools. I build responsive, user-friendly applications with modern tools and technologies.
             </p>
             
             <div className="flex flex-wrap gap-4">
