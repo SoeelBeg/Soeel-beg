@@ -18,6 +18,7 @@ function App() {
   return (
     <ThemeProvider>
       <Helmet>
+        <link rel="canonical" href="https://soeel-beg.vercel.app/" />
         <title>Soeel Beg | Frontend React Developer</title>
         <meta
           name="description"
