@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
               </span>
             </h1>
             
-            <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-8 max-w-lg">
+            <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-8 max-w- text-justify">
               I help individuals and businesses build fast, modern, and responsive web applications using React and other cutting-edge tools. I build responsive, user-friendly applications with modern tools and technologies.
             </p>
             
