@@ -16,22 +16,42 @@ export interface Project {
   technologies: string[];
   github?: string;
   demo?: string;
-  category: 'react' | 'javascript' | 'fullstack';
+  category: 'react' | 'javascript' | 'fullstack' | 'nextjs' | 'typescript';
 }
 
 export const projectsData: Project[] = [
   {
     id: 1,
-    title: 'AI Code Reviewer Tool',
-    description: 'An intelligent code review platform that analyzes source code and provides suggestions for cleaner, optimized, and bug-free code.',
-    image: '/react2.PNG',
-    technologies: ['React', 'Node.js', 'Express', 'Gemini API'],
-    github: 'https://github.com/SoeelBeg/Code-Review/',
-    demo: 'https://code-review-1-7851.onrender.com/',
-    category: 'fullstack'
+    title: 'Sehat Healthcare',
+    description: 'Sehat Healthcare is a modern hospital website built for a client to showcase healthcare services, facilities, doctors, timings, and contact details. Developed with Next.js and Tailwind CSS, it delivers a professional, responsive, and user-friendly platform for patients to connect with the hospital online.',
+    image: '/sehat.PNG',
+    technologies: ['NextJs + TypeScript', 'Tailwind CSS'],
+    github: '#',
+    demo: 'https://sehat-healthcare.vercel.app/',
+    category: 'nextjs'
   },
   {
     id: 2,
+    title: 'FictionDigital',
+    description: 'FictionDigital is a modern client website built for a startup small business. It delivers a clean and responsive design with smooth navigation, ensuring a professional online presence. Developed using React, and Tailwind CSS, the site focuses on performance, scalability, and user-friendly experience.',
+    image: '/fiction.PNG',
+    technologies: ['ReactJS', 'Tailwind CSS'],
+    github: '#',
+    demo: 'https://fiction-digital.vercel.app/',
+    category: 'react'
+  },
+  {
+    id: 3,
+    title: 'Portfolio Website',
+    description: 'A personal portfolio website built with React and styled using Tailwind CSS to showcase projects, skills, experience, and contact information.',
+    image: '/react1.PNG',
+    technologies: ['TypeScript', 'Tailwind CSS'],
+    github: '#',
+    demo: '#',
+    category: 'typescript'
+  },
+  {
+    id: 4,
     title: 'MCP Server Chat Box',
     description: 'An AI-powered chat box application that interacts with the MCP server, connected to Gemini API for intelligent responses and internet access. This system enables posting text and images to X (formerly Twitter) using simple commands via the chat interface.',
     image: '/react4.PNG',
@@ -40,19 +60,19 @@ export const projectsData: Project[] = [
     demo: 'https://mcp-chat-box.onrender.com/',
     category: 'fullstack'
   },
-
   {
-    id: 3,
-    title: 'Lawyer Profile Management System',
-    description: 'A system for managing and displaying lawyer profiles with search, filter, and profile sharing features.',
-    image: '/fullstack1.PNG',
-    technologies: ['Golang', 'HTML', 'CSS', 'JavaScript', 'MySQL', 'API'],
-    github: 'https://github.com/SoeelBeg/lawyer-profile',
-    demo: 'https://lawyer-profile.vercel.app/',
+    id: 5,
+    title: 'AI Code Reviewer Tool',
+    description: 'An intelligent code review platform that analyzes source code and provides suggestions for cleaner, optimized, and bug-free code.',
+    image: '/react2.PNG',
+    technologies: ['React', 'Node.js', 'Express', 'Gemini API'],
+    github: 'https://github.com/SoeelBeg/Code-Review/',
+    demo: 'https://code-review-1-7851.onrender.com/',
     category: 'fullstack'
   },
+
   {
-    id: 4,
+    id: 6,
     title: 'Real Estate Management System',
     description: 'A comprehensive platform to manage real estate property listings, client inquiries, and agent profiles.',
     image: '/fullstack2.PNG',
@@ -63,7 +83,7 @@ export const projectsData: Project[] = [
   },
 
   {
-    id: 5,
+    id: 7,
     title: 'Weather Dashboard',
     description: 'A weather application that displays current and forecasted weather data for any location.',
     image: '/js2.PNG',
@@ -73,7 +93,7 @@ export const projectsData: Project[] = [
     category: 'javascript'
   },
   {
-    id: 6,
+    id: 8,
     title: 'Currency Converter Web App',
     description: 'A responsive web application that allows users to convert currencies in real-time using the latest exchange rates.',
     image: '/js3.PNG',
@@ -83,7 +103,7 @@ export const projectsData: Project[] = [
     category: 'javascript'
   },
   {
-    id: 7,
+    id: 9,
     title: 'Baby Kids School Website',
     description: 'A colorful and responsive website for a baby kids school designed to showcase programs, admission details, staff profiles, and gallery. Built using modern frontend tools with a MySQL database to manage contact forms, admissions, and newsletter subscriptions.',
     image: '/2.PNG',
@@ -94,7 +114,7 @@ export const projectsData: Project[] = [
   },
 
   {
-    id: 8,
+    id: 10,
     title: 'Tic Tac Toe Game',
     description: 'A classic 2-player Tic Tac Toe game built with HTML, CSS, and JavaScript. Features include interactive gameplay, win/draw detection, score tracking, and a clean responsive design for desktop and mobile screens.',
     image: '/js4.PNG',
@@ -104,17 +124,17 @@ export const projectsData: Project[] = [
     category: 'javascript'
   },
   {
-    id: 9,
-    title: 'Portfolio Website',
-    description: 'A personal portfolio website built with React and styled using Tailwind CSS to showcase projects, skills, experience, and contact information.',
-    image: '/react1.PNG',
-    technologies: ['React', 'Tailwind CSS'],
-    github: '#',
-    demo: '#',
-    category: 'react'
+    id: 11,
+    title: 'Lawyer Profile Management System',
+    description: 'A system for managing and displaying lawyer profiles with search, filter, and profile sharing features.',
+    image: '/fullstack1.PNG',
+    technologies: ['Golang', 'HTML', 'CSS', 'JavaScript', 'MySQL', 'API'],
+    github: 'https://github.com/SoeelBeg/lawyer-profile',
+    demo: 'https://lawyer-profile.vercel.app/',
+    category: 'fullstack'
   },
   {
-    id: 10,
+    id: 12,
     title: 'Todo List App',
     description: 'A simple and efficient Todo List application built with ReactJS. It allows users to add, delete, and mark tasks as complete.',
     image: '/react3.PNG',

@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Moon, Sun } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
-// import logo from '../../public/logo.png';
-
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,12 +34,14 @@ const Navbar: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-        ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-md'
-        : 'bg-transparent'
-        }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm shadow-md'
+          : 'bg-transparent'
+      }`}
     >
       <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
+        {/* Logo */}
         <a
           href="#home"
           className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
@@ -51,12 +51,13 @@ const Navbar: React.FC = () => {
           }}
         >
           <img
-            src="/logo.PNG"
+            src="/logo1.PNG"
             alt="Logo"
             className="h-10 w-auto object-contain"
           />
         </a>
 
+        {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
             <a
@@ -72,6 +73,7 @@ const Navbar: React.FC = () => {
             </a>
           ))}
 
+          {/* Theme Toggle */}
           <button
             onClick={toggleTheme}
             aria-label="Toggle theme"
@@ -81,6 +83,7 @@ const Navbar: React.FC = () => {
           </button>
         </div>
 
+        {/* Mobile Menu Buttons */}
         <div className="flex items-center md:hidden">
           <button
             onClick={toggleTheme}
@@ -100,28 +103,38 @@ const Navbar: React.FC = () => {
         </div>
       </nav>
 
-      {/* Mobile menu */}
-      <div
-        className={`md:hidden fixed inset-0 bg-white dark:bg-gray-900 z-40 transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'
-          }`}
-        style={{ top: '68px' }}
-      >
-        <div className="flex flex-col items-center py-8 space-y-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-xl font-medium text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection(link.href);
-              }}
+      {/* Mobile Menu Overlay */}
+      {isOpen && (
+        <div className="fixed w-full top-0 z-50 bg-white dark:bg-gray-900 shadow-md transition-colors">
+          {/* Close Button */}
+          <div className="flex justify-end p-4">
+            <button
+              onClick={() => setIsOpen(false)}
+              aria-label="Close menu"
+              className="p-2 rounded-md bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
             >
-              {link.name}
-            </a>
-          ))}
+              <X size={28} />
+            </button>
+          </div>
+
+          {/* Links */}
+          <div className="flex flex-col items-center justify-center flex-grow space-y-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-xl font-medium text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(link.href);
+                }}
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </header>
   );
 };

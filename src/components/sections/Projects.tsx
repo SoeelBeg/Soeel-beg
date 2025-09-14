@@ -4,9 +4,9 @@ import { projectsData } from '../../utils/data';
 
 const Projects: React.FC = () => {
   const [filter, setFilter] = useState<string>('all');
-  
-  const filteredProjects = filter === 'all' 
-    ? projectsData 
+
+  const filteredProjects = filter === 'all'
+    ? projectsData
     : projectsData.filter(project => project.category === filter);
 
   return (
@@ -19,52 +19,66 @@ const Projects: React.FC = () => {
             Here are some of my recent projects. Each project reflects my skills and approach to problem-solving.
           </p>
         </div>
-        
+
         <div className="flex justify-center mb-12">
           <div className="flex flex-wrap gap-2 sm:gap-4">
-            <button 
+            <button
               onClick={() => setFilter('all')}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                filter === 'all' 
-                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white' 
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${filter === 'all'
+                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
                   : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
-              }`}
+                }`}
             >
               All
             </button>
-            <button 
+            <button
               onClick={() => setFilter('react')}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                filter === 'react' 
-                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white' 
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${filter === 'react'
+                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
                   : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
-              }`}
+                }`}
             >
               ReactJS
             </button>
-            <button 
+            <button
               onClick={() => setFilter('javascript')}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                filter === 'javascript' 
-                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white' 
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${filter === 'javascript'
+                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
                   : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
-              }`}
+                }`}
             >
               JavaScript
             </button>
-            <button 
-              onClick={() => setFilter('fullstack')}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                filter === 'fullstack' 
-                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white' 
+            <button
+              onClick={() => setFilter('nextjs')}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${filter === 'nextjs'
+                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
                   : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
-              }`}
+                }`}
+            >
+              Next.js
+            </button>
+            <button
+              onClick={() => setFilter('typescript')}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${filter === 'typescript'
+                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
+                  : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+                }`}
+            >
+              TypeScript
+            </button>
+            <button
+              onClick={() => setFilter('fullstack')}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${filter === 'fullstack'
+                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white'
+                  : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+                }`}
             >
               Full Stack
             </button>
           </div>
         </div>
-        
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project) => (
             <ProjectCard key={project.id} project={project} />
