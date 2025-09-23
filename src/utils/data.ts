@@ -108,8 +108,8 @@ export const projectsData: Project[] = [
     description: 'A colorful and responsive website for a baby kids school designed to showcase programs, admission details, staff profiles, and gallery. Built using modern frontend tools with a MySQL database to manage contact forms, admissions, and newsletter subscriptions.',
     image: '/2.PNG',
     technologies: ['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'MySQL'],
-    github: 'https://github.com/soeelbeg/kids-school-website',
-    demo: 'https://baby-kids-school-demo.com',
+    github: 'https://github.com/SoeelBeg/baby-kids-school',
+    demo: 'https://soeelbeg.github.io/baby-kids-school/',
     category: 'fullstack'
   },
 
