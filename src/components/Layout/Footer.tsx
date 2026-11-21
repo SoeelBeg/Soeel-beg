@@ -1,66 +1,98 @@
+
 import React from 'react';
-import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import {
+  Github,
+  Linkedin,
+  Twitter,
+  Mail,
+  ArrowUpRight,
+} from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-100 dark:bg-gray-800 py-12">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-6 md:mb-0">
-            <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Soeel Beg
-            </h2>
-            <p className="text-gray-600 dark:text-gray-400 mt-2">
-              Full Stack Developer helping businesses build fast, modern, and scalable web applications.
-            </p>
-          </div>
-          
-          <div className="flex items-center space-x-6">
-            <a 
-              href="https://github.com/soeelbeg" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-              aria-label="GitHub"
-            >
-              <Github size={24} />
-            </a>
-            <a 
-              href="https://linkedin.com/in/soeelbeg" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-              aria-label="LinkedIn"
-            >
-              <Linkedin size={24} />
-            </a>
-            <a 
-              href="https://twitter.com/soeelbeg" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-              aria-label="Twitter"
-            >
-              <Twitter size={24} />
-            </a>
-            <a 
-              href="mailto:soeelbeg@gmail.com" 
-              className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-              aria-label="Email"
-            >
-              <Mail size={24} />
-            </a>
-          </div>
-        </div>
-        
-        <div className="border-t border-gray-200 dark:border-gray-700 mt-8 pt-8 text-center">
-          <p className="text-gray-600 dark:text-gray-400">
-            © {currentYear} Soeel Beg. All rights reserved.
+    <footer className="relative border-t border-white/[.06] bg-[#080b14] px-5 py-8 lg:px-8">
+
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 md:flex-row">
+
+        {/* Brand */}
+        <div className="text-center md:text-left">
+          <p className="font-mono text-sm font-bold tracking-[.2em] text-slate-400">
+            SOEEL<span className="text-cyan-300">.DEV</span>
+          </p>
+
+          <p className="mt-2 text-xs text-slate-600">
+            Full Stack Developer
           </p>
         </div>
+
+        {/* Social Media Links */}
+        <div className="flex items-center gap-3">
+
+          {/* GitHub */}
+          <a
+            href="https://github.com/soeelbeg"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="group flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-slate-400 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-cyan-300/10 hover:text-cyan-300"
+          >
+            <Github size={18} />
+          </a>
+
+          {/* LinkedIn */}
+          <a
+            href="https://linkedin.com/in/soeelbeg"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="group flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-slate-400 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-cyan-300/10 hover:text-cyan-300"
+          >
+            <Linkedin size={18} />
+          </a>
+
+          {/* Twitter */}
+          <a
+            href="https://twitter.com/soeelbeg"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Twitter"
+            className="group flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-slate-400 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-cyan-300/10 hover:text-cyan-300"
+          >
+            <Twitter size={18} />
+          </a>
+
+          {/* Email */}
+          <a
+            href="mailto:soeelbeg@gmail.com"
+            aria-label="Email"
+            className="group flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-slate-400 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-300/40 hover:bg-cyan-300/10 hover:text-cyan-300"
+          >
+            <Mail size={18} />
+          </a>
+
+        </div>
+
+        {/* Copyright / Credit */}
+        <div className="text-center md:text-right">
+
+          <p className="text-[10px] uppercase tracking-widest text-slate-600">
+            Designed & developed by{' '}
+            <span className="font-semibold text-slate-400">
+              Soeel Beg
+            </span>
+            {' '}· {currentYear}
+          </p>
+
+          <p className="mt-2 font-mono text-[10px] text-slate-600">
+            Building digital experiences with passion.
+          </p>
+
+        </div>
+
       </div>
+
     </footer>
   );
 };
