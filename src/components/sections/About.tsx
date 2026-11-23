@@ -23,39 +23,39 @@ const services: {
   color: ServiceColor;
   number: string;
 }[] = [
-  {
-    icon: Code2,
-    title: 'Web Development',
-    description:
-      'Custom websites, dashboards, and full-stack applications tailored to your business needs.',
-    color: 'cyan',
-    number: '01',
-  },
-  {
-    icon: Globe,
-    title: 'UI/UX Design',
-    description:
-      'Clean, modern, and user-friendly interfaces that deliver an excellent user experience.',
-    color: 'violet',
-    number: '02',
-  },
-  {
-    icon: BookOpen,
-    title: 'Bug Fixing',
-    description:
-      'Fixing application issues, resolving errors, and improving overall performance.',
-    color: 'emerald',
-    number: '03',
-  },
-  {
-    icon: Coffee,
-    title: 'Problem Solving',
-    description:
-      'Turning complex requirements into simple, efficient, and effective solutions.',
-    color: 'orange',
-    number: '04',
-  },
-];
+    {
+      icon: Code2,
+      title: 'Web Development',
+      description:
+        'Custom websites, dashboards, and full-stack applications tailored to your business needs.',
+      color: 'cyan',
+      number: '01',
+    },
+    {
+      icon: Globe,
+      title: 'UI/UX Design',
+      description:
+        'Clean, modern, and user-friendly interfaces that deliver an excellent user experience.',
+      color: 'violet',
+      number: '02',
+    },
+    {
+      icon: BookOpen,
+      title: 'Bug Fixing',
+      description:
+        'Fixing application issues, resolving errors, and improving overall performance.',
+      color: 'emerald',
+      number: '03',
+    },
+    {
+      icon: Coffee,
+      title: 'Problem Solving',
+      description:
+        'Turning complex requirements into simple, efficient, and effective solutions.',
+      color: 'orange',
+      number: '04',
+    },
+  ];
 
 const About: React.FC = () => {
   const [showMore, setShowMore] = useState(false);
@@ -173,11 +173,9 @@ const About: React.FC = () => {
 
             {/* Main Introduction */}
             <p className="max-w-2xl text-2xl font-semibold leading-relaxed text-slate-200 sm:text-3xl">
-              Hi, I&apos;m{' '}
-              <span className="text-cyan-300">
-                Soeel Beg
-              </span>
-              {' '}— a Full Stack Developer passionate about building modern digital experiences and practical software solutions.
+              Hi, I&apos;m a Full Stack Developer passionate about
+              building modern digital experiences and practical
+              software solutions.
             </p>
 
             {/* Short & Expanded Description */}
