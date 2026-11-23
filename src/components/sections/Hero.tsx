@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="hero-section relative isolate max-h-screen overflow-hidden bg-[#080B14] px-5 pb-24 pt-32 text-white lg:px-8 lg:pt-20"
+      className="hero-section relative isolate min-h-screen overflow-x-clip bg-[#080B14] px-5 pb-24 pt-28 text-white sm:pt-32 lg:px-8 lg:pt-20"
     >
 
       {/* ==========================================
